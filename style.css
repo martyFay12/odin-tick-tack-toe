@@ -42,10 +42,14 @@ div.board-box {
   border-radius: 10px;
 }
 
-div.board-box:hover {
+div.board-box.playable:hover {
   background-color: aqua;
 }
 
-div.board-box:active {
+div.board-box.playable:active {
   background-color: chocolate;
+}
+
+h1.winner-bar {
+  font-size: 6rem;
 }

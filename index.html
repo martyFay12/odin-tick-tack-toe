@@ -6,24 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tick-Tack-Toe</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./scripts/game.js" defer></script>
     <script src="./scripts/pubsub.js" defer></script>
+    <script src="./scripts/game.js" defer></script>
     <script src="./scripts/gameboard.js" defer></script>
-    <script src="./script.js"></script>
   </head>
   <body>
     <h1>Tick-Tack-Toe!</h1>
+    <h1 class="winner-bar"></h1>
     <div class="board">
-      <div class="board-box" id="1">X</div>
-      <div class="board-box" id="2">0</div>
-      <div class="board-box" id="3">0</div>
-      <div class="board-box" id="4">0</div>
-      <div class="board-box" id="5">X</div>
-      <div class="board-box" id="6">X</div>
-      <div class="board-box" id="7">X</div>
-      <div class="board-box" id="8">0</div>
-      <div class="board-box" id="9">X</div>
+      <div class="board-box playable" id="1">X</div>
+      <div class="board-box playable" id="2">0</div>
+      <div class="board-box playable" id="3">0</div>
+      <div class="board-box playable" id="4">0</div>
+      <div class="board-box playable" id="5">X</div>
+      <div class="board-box playable" id="6">X</div>
+      <div class="board-box playable" id="7">X</div>
+      <div class="board-box playable" id="8">0</div>
+      <div class="board-box playable" id="9">X</div>
     </div>
-    <h1>Current player: X</h1>
+    <h1 class="current-player">Current player: X</h1>
+    <button class="restart" type="button">Restart</button>
   </body>
 </html>
