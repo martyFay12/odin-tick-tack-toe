@@ -77,3 +77,11 @@ button {
   background-color: #9ca3af;
   font-size: 2rem;
 }
+
+button:hover {
+  background-color: #6b7280;
+}
+
+button:active {
+  background-color: #4b5563;
+}

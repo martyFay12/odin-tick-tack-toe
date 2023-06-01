@@ -4,7 +4,7 @@ let game = (function () {
   let gameMarks = ["X", "O"];
   let winnerBar = document.querySelector(".winner-bar");
 
-  // subscribe to events
+  // subscribe to events from pubsub
   events.on("playerPlayed", changeCurrentPlayer);
   events.on("playerPlayed", checkIfWinner);
   events.on("restart", restart);
@@ -12,8 +12,8 @@ let game = (function () {
   function restart() {
     currentPlayer = "X";
     roundCount = 0;
-    events.emit("changedPlayer", currentPlayer);
     winnerBar.textContent = "";
+    events.emit("changedPlayer", currentPlayer);
   }
   function changeCurrentPlayer() {
     currentPlayer === "X" ? (currentPlayer = "O") : (currentPlayer = "X");
@@ -22,7 +22,6 @@ let game = (function () {
   }
   function incrementRounds() {
     roundCount++;
-    console.log(roundCount);
   }
   function checkIfWinner(currentArray) {
     if (roundCount < 5) return;

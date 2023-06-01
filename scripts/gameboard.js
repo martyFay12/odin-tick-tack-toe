@@ -1,4 +1,4 @@
-let gameboard = (function () {
+let gameBoard = (function () {
   let boardBoxes = document.querySelectorAll(".board-box");
   let currentPlayerH1 = document.querySelector(".current-player");
   let restartButton = document.querySelector(".restart");
@@ -6,7 +6,7 @@ let gameboard = (function () {
   let gameArray = [];
   for (let i = 0; i < 9; i++) gameArray.push("");
 
-  // set up pubsub events.
+  // subscribe to pubsub events.
   events.on("changedPlayer", render);
   events.on("gameOver", disableAllBoxes);
 
@@ -39,19 +39,10 @@ let gameboard = (function () {
     this.classList.remove("playable");
     events.emit("playerPlayed", gameArray);
   }
-
   function disableAllBoxes() {
     boardBoxes.forEach((box) => {
       box.classList.remove("playable");
       box.removeEventListener("click", addToArray);
     });
   }
-
-  function getCurrentArray() {
-    return gameArray;
-  }
-
-  return {
-    getCurrentArray,
-  };
 })();
