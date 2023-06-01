@@ -11,20 +11,24 @@
     <script src="./scripts/gameboard.js" defer></script>
   </head>
   <body>
-    <h1>Tick-Tack-Toe!</h1>
-    <h1 class="winner-bar"></h1>
-    <div class="board">
-      <div class="board-box playable" id="1">X</div>
-      <div class="board-box playable" id="2">0</div>
-      <div class="board-box playable" id="3">0</div>
-      <div class="board-box playable" id="4">0</div>
-      <div class="board-box playable" id="5">X</div>
-      <div class="board-box playable" id="6">X</div>
-      <div class="board-box playable" id="7">X</div>
-      <div class="board-box playable" id="8">0</div>
-      <div class="board-box playable" id="9">X</div>
+    <div class="container">
+      <button class="restart" type="button">Restart</button>
+      <div class="board-container">
+        <h1 class="title">Tick-Tack-Toe!</h1>
+        <h1 class="winner-bar"></h1>
+        <div class="board">
+          <div class="board-box playable" id="1">X</div>
+          <div class="board-box playable" id="2">0</div>
+          <div class="board-box playable" id="3">0</div>
+          <div class="board-box playable" id="4">0</div>
+          <div class="board-box playable" id="5">X</div>
+          <div class="board-box playable" id="6">X</div>
+          <div class="board-box playable" id="7">X</div>
+          <div class="board-box playable" id="8">0</div>
+          <div class="board-box playable" id="9">X</div>
+        </div>
+        <h1 class="current-player">Current player: X</h1>
+      </div>
     </div>
-    <h1 class="current-player">Current player: X</h1>
-    <button class="restart" type="button">Restart</button>
   </body>
 </html>

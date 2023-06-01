@@ -13,6 +13,7 @@ let game = (function () {
     currentPlayer = "X";
     roundCount = 0;
     events.emit("changedPlayer", currentPlayer);
+    winnerBar.textContent = "";
   }
   function changeCurrentPlayer() {
     currentPlayer === "X" ? (currentPlayer = "O") : (currentPlayer = "X");
